@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Skills Learning Space</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        p2 {
+            text-align: center;
+            font-family: "Raleway", sans-serif;
+            font-size: 17px;
+            color: #1e6ca6;
+        }
+
+        .main {
+            margin: auto;
+        }
+
+        .row {
+            margin: 20px 30px;
+        }
+
+        .row,
+        .row>.column {
+            padding: 10px;
+        }
+
+        .column {
+            float: center;
+            width: 50%;
+            display: none;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+
+<body>
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-9 text-center">
+                    <h1>SLS</h1>
+                    <h2>welcomes you to the Video Tutorials page</h2>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="loginindex.html" class="btn-get-started scrollto">Return to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Videos specially curated for your timing preferences</h2>
+                <p><button onclick="myFunction()">Toggle Light/Dark Mode</button></p>
+            </div>
+        </div>
+
+        <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+            <div id="myBtnContainer" class="text-center">
+                <button class="btn active" onclick="filterSelection('1')"> Less than 30 Mins</button>
+                <button class="btn" onclick="filterSelection('2')"> Between 30 Mins to 1 Hr</button>
+                <button class="btn" onclick="filterSelection('3')"> Between 1 to 2 Hrs</button>
+                <button class="btn" onclick="filterSelection('4')"> More than 2 Hrs </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column 1">
+                <div class="content">
+                    <iframe src="https://www.youtube.com/embed/sTeoEFzVNSc?autoplay=0" style="width:100%"
+                        allowfullscreen></iframe>
+                    <p2>Tut 1: ChatGPT - Prerequisites: Nil</p2>
+                </div>
+            </div>
+            <div class="column 3">
+                <div class="content">
+                    <iframe src="https://www.youtube.com/embed/ZzaPdXTrSb8?autoplay=0" style="width:100%"
+                        allowfullscreen></iframe>
+                    <p2>Tut 2: C/C++ - Used With: PHP</p2>
+                </div>
+            </div>
+            <div class="column 2">
+                <div class="content">
+                    <iframe src="https://www.youtube.com/embed/HG6yIjZapSA?autoplay=0" style="width:100%"
+                        allowfullscreen></iframe>
+                    <p2>Tut 3: Docker - Prerequisites: Linux, Windows GUI</p2>
+                </div>
+            </div>
+            <div class="column 3">
+                <div class="content">
+                    <iframe src="https://www.youtube.com/embed/qz0aGYrrlhU?autoplay=0" style="width:100%"
+                        allowfullscreen></iframe>
+                    <p2>Tut 4: HTML - Used With: CSS, MySQL, PHP</p2>
+                </div>
+            </div>
+            <div class="column 4">
+                <div class="content">
+                    <iframe src="https://www.youtube.com/embed/eIrMbAQSU34?autoplay=0" style="width:100%"
+                        allowfullscreen></iframe>
+                    <p2>Tut 5: Java - Prerequisites: Command Line Interface, C/C++</p2>
+                </div>
+            </div>
+            <div class="column 4">
+                <div class="content">
+                    <iframe src="https://www.youtube.com/embed/_uQrJ0TkZlc?autoplay=0" style="width:100%"
+                        allowfullscreen></iframe>
+                    <p2>Tut 6: Python - Used With: Flask, JavaScript</p2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+            }
+        }
+
+        function AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>UDE Group 5</h3>
+                        <p>
+                            SIT@NYP<br>
+                            180 Ang Mo Kio Ave 8<br>
+                            Singapore 569830<br><br>
+                            <strong>Phone:</strong> +65 9876 5432<br>
+                            <strong>Email:</strong> group5@sit.singaporetech.edu.sg<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-8 col-md-6 footer-newsletter">
+                        <h4>Join Our Newsletter</h4>
+                        <p>No internet connection? No worries! Latest tech news will be delivered straight to your
+                            doorstep.</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4">
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Group 5</span></strong>. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Skills Learning Space</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Raleway", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+      background-color: rgb(231, 231, 231);
+    }
+
+    .container {
+      height: 600px;
+      width: 500px;
+      background-color: white;
+      box-shadow: 8px 8px 20px rgb(128, 128, 128);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn {
+      height: 60px;
+      width: 300px;
+      margin: 20px auto;
+      box-shadow: 10px 10px 30px rgb(204, 204, 204);
+      border-radius: 50px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .login,
+    .register {
+      font-size: 22px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .slider {
+      height: 60px;
+      width: 150px;
+      border-radius: 30px;
+      background-image: linear-gradient(to right,
+          rgb(255, 255, 255),
+          rgb(217, 217, 217));
+      position: absolute;
+      top: 20px;
+      left: 100px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .moveslider {
+      left: 250px;
+    }
+
+    .form-section {
+      height: 500px;
+      width: 1000px;
+      padding: 20px 0;
+      display: flex;
+      position: relative;
+      transition: all 0.5s ease-in-out;
+      left: 0px;
+    }
+
+    .form-section-move {
+      left: -500px;
+    }
+
+    .login-box,
+    .register-box {
+      height: 100%;
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0px 40px;
+    }
+
+    .login-box {
+      gap: 50px;
+    }
+
+    .register-box {
+      gap: 30px;
+    }
+
+    .ele {
+      height: 50px;
+      width: 300px;
+      outline: none;
+      border: none;
+      color: rgb(77, 77, 77);
+      background-color: rgb(240, 240, 240);
+      border-radius: 50px;
+      padding-left: 30px;
+      font-size: 16px;
+    }
+
+    .clkbtn {
+      height: 50px;
+      width: 300px;
+      border-radius: 30px;
+      background-image: linear-gradient(to right,
+          rgb(123, 255, 178),
+          rgb(97, 207, 114));
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .calbtn {
+      height: 50px;
+      width: 300px;
+      border-radius: 30px;
+      background-image: linear-gradient(to right,
+          rgb(251, 175, 138),
+          rgb(255, 100, 83));
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="slider"></div>
+    <div class="btn">
+      <button class="login">Login</button>
+      <button class="register">Register</button>
+    </div>
+
+    <div class="form-section">
+      <div class="login-box">
+        <input type="email" class="email ele" placeholder="Email">
+        <input type="password" class="password ele" placeholder="Password">
+        <a href="loginindex.html"><button class="clkbtn">Login</button></a>
+        <a href="index.html"><button class="calbtn">Cancel</button></a>
+      </div>
+
+      <div class="register-box">
+        <input type="email" class="email ele" placeholder="Email">
+        <input type="password" class="password ele" placeholder="Password">
+        <input type="password" class="password ele" placeholder="Confirm password">
+        <a href="login.html"><button class="clkbtn">Register</button></a>
+        <a href="index.html"><button class="calbtn">Cancel</button></a>
+      </div>
+    </div>
+  </div>
+  <script>
+    let register = document.querySelector(".register");
+    let login = document.querySelector(".login");
+    let slider = document.querySelector(".slider");
+    let formSection = document.querySelector(".form-section");
+
+    register.addEventListener("click", () => {
+      slider.classList.add("moveslider");
+      formSection.classList.add("form-section-move");
+    });
+
+    login.addEventListener("click", () => {
+      slider.classList.remove("moveslider");
+      formSection.classList.remove("form-section-move");
+    });
+  </script>
+</body>
+
+</html>
